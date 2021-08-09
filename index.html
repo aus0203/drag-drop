@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invoice settings</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="primary-header"></div>
+    <div class="pageheader">
+        <h1 class="pageheader-title">Create invoice layout</h1>
+    </div>
+
+    <div class="invoice-edit-area">
+        <div class="panel-left">
+            <div class="doc-view-header"></div>
+            <div class="doc-view">
+                <img class="invoice-doc" src="./invoice-doc.png" alt="invoice-preview">
+            </div>
+        </div>
+        <div class="panel-right">
+            <div class="tab-area"></div>
+            <div class="board-layout">
+                <h3>Company details</h3>
+
+                <p>Drag and drop to activate/inactivate the options. You can also reorder the option by dragging.</p>
+
+                <div id='boardlists' class="board-lists">
+                    <div id='list1' class="board-list">
+                      <div class="list-title">
+                        Hide
+                      </div>
+              
+                      <div id='card1' class="card" draggable="true" >
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>CoC</p>
+                      </div>
+                    </div>
+                    <div id='list2' class="board-list" >
+                      <div class="list-title">
+                        Left
+                      </div>
+              
+                      <div id='card2' class="card" draggable="true" >
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>Company name</p>
+                      </div>
+                      <div id='card3' class="card" draggable="true" >
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>Address</p>
+                      </div>
+                      <div id='card4' class="card" draggable="true">
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>Email</p>
+                      </div>
+                      <div id='card5' class="card" draggable="true">
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>Phone</p>
+                      </div>
+              
+                    </div>
+                    <div id='list3' class="board-list">
+                      <div class="list-title">
+                        Right
+                      </div>
+
+                      <div id='card6' class="card" draggable="true">
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>IBAN</p>
+                      </div>
+                      <div id='card7' class="card" draggable="true">
+                        <img class="drag-icon" src="./a-icon-six-dots.svg" alt="">
+                        <p>VAT</p>
+                      </div>
+              
+              
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagefooter"></div>
+
+
+    <script src='./dragdropswap.js'></script>
+</body>
+
+</html>
