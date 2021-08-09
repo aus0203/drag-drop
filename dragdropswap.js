@@ -1,53 +1,54 @@
+dragula([document.getElementById('list1'), document.getElementById('list2'), document.getElementById('list3')])
 
 
-let cards = document.querySelectorAll('.card');
-let lists = document.querySelectorAll('.board-list');
+// let cards = document.querySelectorAll('.card');
+// let lists = document.querySelectorAll('.board-list');
 
 
-cards.forEach((card)=>{
-    registerEventsOnCard(card);
-});
+// cards.forEach((card) => {
+//     registerEventsOnCard(card);
+// });
 
-lists.forEach((list)=>{
-    list.addEventListener('dragover', (e)=>{
-        e.preventDefault();
-        let draggingCard = document.querySelector('.dragging');
-        let cardAfterDraggingCard = getCardAfterDraggingCard(list, e.clientY);
-        if(cardAfterDraggingCard){
-            
-                cardAfterDraggingCard.parentNode.insertBefore(draggingCard, cardAfterDraggingCard);
-        } else{
-            list.appendChild(draggingCard);
-        }
-        
-    });
-});
+// lists.forEach((list) => {
+//     list.addEventListener('dragover', (e) => {
+//         e.preventDefault();
+//         let draggingCard = document.querySelector('.dragging');
+//         let cardAfterDraggingCard = getCardAfterDraggingCard(list, e.clientY);
+//         if (cardAfterDraggingCard) {
+//             cardAfterDraggingCard.parentNode.insertBefore(draggingCard, cardAfterDraggingCard);
+//         } else {
+//             list.appendChild(draggingCard);
+//         }
 
-function getCardAfterDraggingCard(list, yDraggingCard){
+//     });
+// });
 
-    let listCards = [...list.querySelectorAll('.card:not(.dragging)')];
+// function getCardAfterDraggingCard(list, yDraggingCard) {
 
-    return listCards.reduce((closestCard, nextCard)=>{
-        let nextCardRect = nextCard.getBoundingClientRect();
-        let offset = yDraggingCard - nextCardRect.top - nextCardRect.height /2;
+//     let listCards = [...list.querySelectorAll('.card:not(.dragging)')];
 
-        if(offset < 0 && offset > closestCard.offset){
-            return {offset, element: nextCard}
-        } else{
-            return closestCard;
-        }
-    
-    }, {offset: Number.NEGATIVE_INFINITY}).element;
+//     return listCards.reduce((closestCard, nextCard) => {
+//         let nextCardRect = nextCard.getBoundingClientRect();
+//         let offset = yDraggingCard - nextCardRect.top - nextCardRect.height / 2;
 
-}
+//         if (offset < 0 && offset > closestCard.offset) {
+//             return { offset, element: nextCard }
+//         } else {
+//             return closestCard;
+//         }
 
-function registerEventsOnCard(card){
-    card.addEventListener('dragstart', (e)=>{
-        card.classList.add('dragging');
-    });
+//     }, { offset: Number.NEGATIVE_INFINITY }).element;
+
+// }
+
+// function registerEventsOnCard(card) {
+//     card.addEventListener('dragstart', (e) => {
+//         card.classList.add('dragging');
+//     });
 
 
-    card.addEventListener('dragend', (e)=>{
-        card.classList.remove('dragging');
-    });
-}
+//     card.addEventListener('dragend', (e) => {
+//         card.classList.remove('dragging');
+//     });
+// }
+

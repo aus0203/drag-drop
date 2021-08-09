@@ -39,7 +39,7 @@ p {
 }
 
 /*Actual view*/
-.primary-header {
+.top-bar {
     width: 100vw;
     height: 52px;
     background-color: #343434;
@@ -135,7 +135,7 @@ p {
     height: 420px;
 }
 
-.board-list{
+.board-list {
     background-color: #ffffff;
     border-radius: 2px;
     border: 1px solid #eeeeee;
@@ -147,12 +147,12 @@ p {
     padding: 10px;
 }
 
-.board-list:hover{
+.board-list:hover {
     border: 1px solid #368bc2;
     transition: 200ms ease-in-out;
 }
 
-#list1:hover{
+#list1:hover {
     border: 1px solid #afafaf;
     transition: 200ms ease-in-out;
 }
@@ -165,7 +165,6 @@ p {
     padding-left: 12px;
 }
 
-
 /**-----drag-card-----**/
 .card {
     background-color: #f6f6f6;
@@ -173,20 +172,47 @@ p {
     border-radius: 2px;
     box-shadow: 0px 3px 8px rgba(29, 36, 38, 0.04);
     padding: 10px 8px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
     cursor: pointer;
 }
 
-.card.dragging{
+.card.dragging {
     box-shadow: 0px 10px 24px rgba(29, 36, 38, 0.12);
 }
 
-.card:hover{
+.card:hover {
     background-color: #ffffff;
     transition: 300ms ease-in-out;
 }
 
-.drag-icon{
+.drag-icon {
     width: 16px;
     margin-right: 8px;
+}
+
+/*Dragula*/
+
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+}
+.gu-hide {
+    display: none !important;
+}
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.gu-transit {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+    background: #AFAFAF;
+    color:#AFAFAF;
 }
