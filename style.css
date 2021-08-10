@@ -216,3 +216,7 @@ p {
     background: #AFAFAF;
     color:#AFAFAF;
 }
+
+.card.gu-transit .drag-icon{
+    visibility: hidden;
+}
